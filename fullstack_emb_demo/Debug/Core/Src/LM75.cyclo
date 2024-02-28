@@ -1,0 +1,6 @@
+../Core/Inc/LM75.hpp:10:13:LM75::~LM75()	1
+../Core/Inc/LM75.hpp:10:13:virtual LM75::~LM75()	1
+../Core/Src/LM75.cpp:5:1:LM75::LM75(I2C_HandleTypeDef*, uint16_t)	1
+../Core/Src/LM75.cpp:11:6:virtual bool LM75::write(uint8_t, uint8_t)	1
+../Core/Src/LM75.cpp:16:6:virtual bool LM75::read(uint8_t, uint8_t&)	1
+../Core/Src/LM75.cpp:22:7:float LM75::readTemperature()	4

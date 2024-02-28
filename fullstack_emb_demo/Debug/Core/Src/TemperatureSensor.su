@@ -1,0 +1,6 @@
+../Core/Src/TemperatureSensor.cpp:5:1:TemperatureSensor::TemperatureSensor(I2C_HandleTypeDef*, UART_HandleTypeDef*)	24	static
+../Core/Src/TemperatureSensor.cpp:10:6:void TemperatureSensor::scanI2CDevices()	96	static
+../Core/Src/TemperatureSensor.cpp:26:6:void TemperatureSensor::updateTemperatures()	24	static
+../Core/Src/TemperatureSensor.cpp:32:6:void TemperatureSensor::sendAllTemperaturesOverUART()	72	static
+../Core/Src/TemperatureSensor.cpp:40:6:void TemperatureSensor::createTemperatureJSON(char*, size_t)	312	static
+../Core/Src/TemperatureSensor.cpp:61:7:float TemperatureSensor::readLM75Temperature(uint8_t)	32	static
