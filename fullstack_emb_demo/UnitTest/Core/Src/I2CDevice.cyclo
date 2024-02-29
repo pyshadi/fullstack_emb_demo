@@ -1,0 +1,3 @@
+../Core/Src/I2CDevice.cpp:4:1:I2CDevice::I2CDevice(I2C_HandleTypeDef*, uint16_t)	1
+../Core/Src/I2CDevice.cpp:9:1:I2CDevice::~I2CDevice()	1
+../Core/Src/I2CDevice.cpp:9:1:virtual I2CDevice::~I2CDevice()	1

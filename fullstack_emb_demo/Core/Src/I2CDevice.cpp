@@ -3,7 +3,7 @@
 
 I2CDevice::I2CDevice(I2C_HandleTypeDef* handle, uint16_t deviceAddress)
     : handle(handle), deviceAddress(deviceAddress) {
-    // Initialization code specific to the I2C device could go here
+    // Initialisation code specific to the I2C device could go here
 }
 
 I2CDevice::~I2CDevice() {

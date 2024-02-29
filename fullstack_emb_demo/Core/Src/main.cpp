@@ -9,6 +9,7 @@ extern "C" {
 #include "I2CDevice.hpp"
 #include "TemperatureSensor.hpp"
 #include <vector>
+#include <cstdio>
 #include <cstring> // Add this line to include strlen
 
 #include "LM75.hpp"
@@ -25,16 +26,22 @@ int main() {
     MX_SPI1_Init();
     MX_USART2_UART_Init();
 
+
+	char hexStr[11]; // Each byte to 2 hex characters + space or end ('\0')
+
+
     TemperatureSensor sensor(&hi2c1, &huart2);
     sensor.scanI2CDevices();
 
     while (1) {
+
         sensor.updateTemperatures();
         char jsonOutput[512];
         sensor.createTemperatureJSON(jsonOutput, sizeof(jsonOutput));
         HAL_UART_Transmit(&huart2, (uint8_t*)jsonOutput, strlen(jsonOutput), HAL_MAX_DELAY);
-        HAL_Delay(1000);
+        HAL_Delay(5000);
     }
+
 }
 
 

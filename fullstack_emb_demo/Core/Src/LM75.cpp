@@ -7,16 +7,6 @@ LM75::LM75(I2C_HandleTypeDef* handle, uint16_t deviceAddress) : I2CDevice(handle
 // Destructor
 
 
-// Implement the I2CDevice interface
-bool LM75::write(uint8_t reg, uint8_t data) {
-    // Call your hardware-specific I2C write function here
-    return true; // return true if success, false otherwise
-}
-
-bool LM75::read(uint8_t reg, uint8_t& data) {
-    // Call your hardware-specific I2C read function here
-    return true; // return true if success, false otherwise
-}
 
 // Implement the TemperatureSensor interface
 float LM75::readTemperature() {
