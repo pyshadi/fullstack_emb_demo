@@ -1,0 +1,2 @@
+../Core/Src/LM75.cpp:5:1:LM75::LM75(I2C_HandleTypeDef*, uint16_t)	24	static
+../Core/Src/LM75.cpp:12:7:float LM75::readTemperature()	24	static
