@@ -62,7 +62,9 @@ This function is called whenever new data is available on the serial port. It:
 Cleans up resources when the application window is closed. It ensures the serial port is closed and deletes the UI object.
 
 
-
+## TO DO:
+1. Obtain timestamps for data points and display them on the x-axis of the Qt application.
+2. Add zooming and line (ON/OFF) toggling capabilities into the line chart functionality.
 
 ## License
 MIT - Feel free to use and modify this code for your projects.
