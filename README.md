@@ -60,10 +60,6 @@ This function is called whenever new data is available on the serial port. It:
 ### Destructor: ~ApplicationWindow
 Cleans up resources when the application window is closed. It ensures the serial port is closed and deletes the UI object.
 
-1. Uses QSerialPort for reading temperature data sent from the microcontroller over UART.
-2. Processes incoming data as JSON.
-3. Uses QtCharts to dynamically create and update a line chart with real-time temperature data from multiple sensors.
-4. Ensures proper cleanup of resources, such as closing the serial port and deleting UI components upon application closure.
 
 
 
