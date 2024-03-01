@@ -1,4 +1,4 @@
-# fullstack_emb_demo
+# 1. Folder: fullstack_emb_demo
 # Temperature Sensor Data Logger
 ## Description
 This project is designed to interface with a temperature sensor using the I2C protocol on STM32F407. It reads temperature data, formats the data into a JSON string, and transmits it over UART. 
@@ -34,5 +34,38 @@ STM32F407 with I2C, SPI, USART, and GPIO capabilities.
 HAL (Hardware Abstraction Layer) libraries.
 I2C temperature sensor (LM75).
 Development environment (STM32CubeIDE).
+
+# 2. Folder: fullstack_emb_gui
+# Temperature Visualization
+## Description
+C++ desktop application, developed with Qt framework, designed to serve as a graphical user interface (GUI) for the microcontroller-based temperature monitoring system described earlier. This GUI application interfaces with the microcontroller through a serial port to receive real-time temperature data and visualizes this data on a chart. 
+
+### Constructor: ApplicationWindow
+The constructor initializes the main components of the application:
+
+1. Initializes the UI and sets up the main window.
+2. Initializes the QSerialPort and QChart objects, setting up the serial port with a specified port name and baud rate, and connecting the readyRead signal of the serial port to the readSerialData slot to handle incoming data.
+3. Sets up the chart view, including chart title, rendering hints, and making it the central widget of the main window.
+4. Trys to open the serial port for reading and logs an error message if unsuccessful.
+
+### Slot: readSerialData
+This function is called whenever new data is available on the serial port. It:
+
+1. Reads all available data from the serial port and parses it as a JSON document.
+2. Checks if the JSON document contains an array and iterates over its elements, extracting the temperature data and sensor address.
+3. Dynamically manages a map of QLineSeries objects, each representing a data series for a unique sensor. If a series for a sensor doesn't exist, it creates a new one and adds it to the chart.
+4. Adds the temperature data to the appropriate series and increments a time index used for the x-axis of the chart.
+5. Optionally adjusts the chart's axis ranges.
+
+### Destructor: ~ApplicationWindow
+Cleans up resources when the application window is closed. It ensures the serial port is closed and deletes the UI object.
+
+1. Uses QSerialPort for reading temperature data sent from the microcontroller over UART.
+2. Processes incoming data as JSON.
+3. Uses QtCharts to dynamically create and update a line chart with real-time temperature data from multiple sensors.
+4. Ensures proper cleanup of resources, such as closing the serial port and deleting UI components upon application closure.
+
+
+
 ## License
 MIT - Feel free to use and modify this code for your projects.
