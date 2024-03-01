@@ -38,7 +38,8 @@ Development environment (STM32CubeIDE).
 # 2. Folder: fullstack_emb_gui
 # Temperature Visualization
 ## Description
-C++ desktop application, developed with Qt framework, designed to serve as a graphical user interface (GUI) for the microcontroller-based temperature monitoring system described earlier. This GUI application interfaces with the microcontroller through a serial port to receive real-time temperature data and visualizes this data on a chart. 
+C++ desktop application, developed with Qt framework, designed to serve as a graphical user interface (GUI) for the microcontroller-based temperature monitoring system described earlier. This GUI application interfaces with the microcontroller through a serial port to receive real-time temperature data and visualizes this data on a chart. <br><br>
+![alt text](assets/Cpp_App.png "Qt APP")
 
 ### Constructor: ApplicationWindow
 The constructor initializes the main components of the application:
